@@ -15,7 +15,7 @@ export const introData = [
     {
         id: 1,
         title: "intro1",
-        text: "As a dynamic digital creator with over 20 years of experience, my expertise is deeply rooted in design and spans web development, 3D animation, and programming in JavaScript and Python. My foundational skills in graphic design and 3D visualization empower me to craft engaging visuals and immersive experiences that captivate and communicate."
+        text: "blockchain"
     },
     {
         id: 2,
@@ -114,21 +114,21 @@ export const portfolioItems = [
         category: "design",
         thumbnail: Design1,
         fullImage: Design1,
-        description: 'A design for a WIP web3 project. I was responsible for the concept, design and frontend development. See the live (WIP) site at: <a href="http://dev.brokenseas.io" target="_blank">dev.brokenseas.io</a>'
+        description: 'A design for the rental portion of the Salty Spud web3 project. See the live site at: <a href="http://dev.brokenseas.io" target="_blank">dev.brokenseas.io</a>'
     },
     {
         id: 2,
         category: "development",
         thumbnail: Dev1,
         fullImage: Dev1,
-        description: "Some react and Tailwind CSS work from development of my portfolio site. Responsible for design and development. Github link <a href='http://www.github.com/cabot364/hiresteve' target='_blank'>here</a>",
+        description: "Some react and tailwindCSS work from development of this website.",
     },
     {
         id: 3,
         category: "design",
         thumbnail: Design2,
         fullImage: Design2,
-        description: 'Responsible for design and frontend development (react/vite/Tailwind). Github link <a href="http://www.github.com/cabot364/havencrest" target="_blank">here</a>',
+        description: 'A website designed and developed for high-value rental. See the live site at: <a href="http://myhavencrest.com" target="_blank">myhavencrest.com</a>',
     }
 
 

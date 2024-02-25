@@ -1,10 +1,17 @@
 import React from 'react';
-import { workData } from "../data.js";
 import WorkHistory from "../Components/WorkHistory.jsx";
+import {useData} from "../Utility/DataContext.jsx";
 
 const WorkSection = ({ className }) => {
+
+    const workData = useData("workData");
+
+    if (!workData) {
+        return <div>Loading...</div>;
+    }
+
     return (
-        <section className={`flex flex-row ${className}`}>
+        <section className={`${className}`}>
             <WorkHistory history={workData} />
         </section>
     );

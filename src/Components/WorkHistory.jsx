@@ -2,19 +2,17 @@ import React from 'react';
 
 const WorkHistory = ({ history, className }) => {
     return (
-        <div className={`flex flex-col ${className}`}>
-            <ul className="flex flex-row flex-wrap gap-10 justify-between">
+        <div className={className}>
+            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-10">
                 {history.map((his) => (
-                    <li key={his.id}>
-                        <div className="flex flex-row">
-                            <div className="">
-                                <img src={his.logo} alt="Company Logo" className="rounded w-36 h-auto"/>
-                            </div>
-                            <div className="flex flex-col ml-4 text-left w-2/3">
-                                <h3 className="text-lg font-semibold text-gray-400">{his.title}</h3>
-                                <p className="text-gray-500">{his.name}</p>
-                                <p className="text-gray-500">{his.startyear} - {his.endyear}</p>
-                            </div>
+                    <li key={his.id} className="flex flex-col md:flex-row items-center md:items-start">
+                        <div className="flex h-auto md:h-24 w-24 justify-center items-end md:items-start">
+                            <img src={his.logo} alt="Company Logo" className="rounded max-w-24 max-h-full"/>
+                        </div>
+                        <div className="mt-4 md:mt-0 md:ml-4 md:text-left text-center">
+                            <h3 className="text-lg font-semibold text-gray-400">{his.title}</h3>
+                            <p className="text-gray-500">{his.name}</p>
+                            <p className="text-gray-500">{his.startyear} - {his.endyear}</p>
                         </div>
                     </li>
                 ))}
