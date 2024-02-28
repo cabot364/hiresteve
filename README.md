@@ -6,6 +6,8 @@ I designed and developed this website with React/Vite/Tailwind CSS. The website 
 
 This bit of code in particular found in ./Utility/DataContext.jsx
 
+```
+
 // Context provider component
 export const DataProvider = ({ children }) => {
   const [data, setData] = useState({});
@@ -31,6 +33,8 @@ export const DataProvider = ({ children }) => {
 
   return <DataContext.Provider value={data}>{children}</DataContext.Provider>;
 };
+
+```
 
 You can modify the switch statement to create new subdomain/data pairs. 
 
