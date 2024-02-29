@@ -2,13 +2,7 @@ import React from 'react';
 import WorkHistory from "../Components/WorkHistory.jsx";
 import {useData} from "../Utility/DataContext.jsx";
 
-const WorkSection = ({ className }) => {
-
-    const workData = useData("workData");
-
-    if (!workData) {
-        return <div>Loading...</div>;
-    }
+const WorkSection = ({ className, workData }) => {
 
     return (
         <section className={`${className}`}>

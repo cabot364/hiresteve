@@ -1,14 +1,7 @@
 import SkillsList from "../Components/SkillsList.jsx";
 import backgroundImage from "../assets/images/steve_bg.png";
-import {useData} from "../Utility/DataContext.jsx";
 
-const HeroSection = () => {
-
-    const skillsList = useData("skillsList");
-
-    if (!skillsList) {
-        return <div>Loading...</div>;
-    }
+const HeroSection = ({skillsList})  => {
 
     return (
         <div className="flex flex-row border-b-8 border-b-gray-200 p-3 md:p-0">

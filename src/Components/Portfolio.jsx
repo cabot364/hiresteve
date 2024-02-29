@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import Modal from './Modal';
-import {useData} from "../Utility/DataContext.jsx";
 
-const Portfolio = () => {
-
-    const portfolioItems = useData("portfolioItems");
+const Portfolio = ({portfolioItems}) => {
 
     const [filter, setFilter] = useState('all');
     const [selectedItem, setSelectedItem] = useState(null);
@@ -16,10 +13,6 @@ const Portfolio = () => {
 
     const handleItemClick = (item) => {
         setSelectedItem(item);
-    }
-
-    if (!portfolioItems) {
-        return <div>Loading...</div>;
     }
 
     return (

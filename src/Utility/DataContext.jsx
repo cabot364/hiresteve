@@ -6,6 +6,7 @@ const DataContext = createContext(null);
 // Context provider component
 export const DataProvider = ({ children }) => {
   const [data, setData] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const subdomain = window.location.hostname.split('.')[0];
@@ -23,19 +24,21 @@ export const DataProvider = ({ children }) => {
 
     dataModulePromise.then((module) => {
       setData(module.default);
+      setIsLoading(false); // Set loading to false once data is loaded
+
     });
   }, []);
 
-  return <DataContext.Provider value={data}>{children}</DataContext.Provider>;
+  return <DataContext.Provider value={{ isLoading, data }}>{children}</DataContext.Provider>;
 };
 
 // Hook to use data in components
-export const useData = (key) => {
+export const useData = () => {
   const contextData = useContext(DataContext);
 
   if (contextData === undefined) {
     throw new Error('useData must be used within a DataProvider');
   }
 
-  return contextData[key]; // Returns only the part of the data requested
+  return contextData; // Returns only the part of the data requested
 };
