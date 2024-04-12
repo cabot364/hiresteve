@@ -6,7 +6,7 @@ const Portfolio = ({portfolioItems}) => {
     const [filter, setFilter] = useState('all');
     const [selectedItem, setSelectedItem] = useState(null);
 
-    const filteredItems = portfolioItems.filter(item => filter === 'all' || item.category === filter);
+    const filteredItems = portfolioItems.filter(item => filter === 'all' || item.category.includes(filter));
 
     const activeButton = "bg-[#5886C4] text-gray-100 border-blue-900 border-2";
     const inactiveButton = "bg-gray-400";
